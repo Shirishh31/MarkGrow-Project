@@ -10,7 +10,7 @@ This project showcases services like product marketing, brand growth, social med
 
 ## 🌐 Live Demo
 
-https://shirishh31.github.io/MARKGROW-SHIRISH-KIRTANA-FINALLLLLL/
+https://shirishh31.github.io/MarkGrow-Project/
 
 ---
 
