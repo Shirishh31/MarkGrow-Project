@@ -39,7 +39,7 @@ https://shirishh31.github.io/MarkGrow-Project/
 
 ## 🧠 Project Purpose
 
-This project is created to demonstrate front-end development skills and build a real-world digital marketing agency website.
+This project is created to demonstrate front-end development skills and build a real world digital marketing agency website.
 It can be used as a template for agencies, freelancers, or startups looking to establish an online presence.
 
 ---
@@ -54,33 +54,3 @@ MARKGROW/
 ├── js/
 ├── images/
 ```
-
----
-
-## ⚠️ Note
-
-* This is a front-end project only
-* No backend or database is connected
-* Contact form and login are for UI demonstration purposes
-
----
-
-## 🚀 Future Improvements
-
-* Add backend integration (Node.js / PHP)
-* Connect database for real user data
-* Implement real authentication system
-* Improve animations and performance
-
----
-
-## 👨‍💻 Author
-
-Shirish
-Frontend Developer
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
