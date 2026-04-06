@@ -1,0 +1,38 @@
+/* ── HOME.CSS — Hero Section ── */
+
+#home {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; padding: 12vh 5vw 8vh;
+  background: transparent; position: relative; overflow: hidden;
+}
+#hero-canvas { display: none; }
+.hero-content { position: relative; z-index: 10; }
+.hero-grid { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 10; width: 100%; }
+.hero-deco { display: none; }
+
+.htitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem,8vw,8rem); font-weight: 300; line-height: 1.05; color: var(--ch);
+}
+.htitle em { font-style: italic; font-weight: 400; color: var(--mg); }
+.hsub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem,3vw,2.5rem); font-weight: 300; font-style: italic;
+  color: var(--mg); margin-top: .4rem; line-height: 1;
+}
+.htag {
+  font-size: clamp(.85rem,1.3vw,.95rem); color: var(--dg);
+  max-width: 560px; line-height: 1.8; margin: 1.8rem auto 0; font-weight: 300;
+}
+.hcta {
+  display: inline-block; margin-top: 2rem;
+  padding: .85rem 2.2rem; background: var(--ch); color: var(--white);
+  text-decoration: none; font-size: .73rem; letter-spacing: .2em; text-transform: uppercase;
+  transition: background-color 0.3s;
+  border-radius: 2px;
+}
+.hcta:hover { background: var(--mg); }
+.hline { display: none; }
+
+/* RESPONSIVE */
+@media(max-width:900px) { .hcta { margin: 1.5rem auto 0; } .htag { margin: 1.5rem auto; } }

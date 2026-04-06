@@ -1,0 +1,33 @@
+/* ── CONTACT.CSS — Contact Form ── */
+
+#contact { background: transparent; }
+.clayout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 4rem; align-items: start; }
+.cform { display: flex; flex-direction: column; gap: 1.3rem; }
+.ff label { display: block; font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--mg); margin-bottom: .45rem; }
+.ff input, .ff textarea, .ff select {
+  width: 100%; border: none; border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: .6rem 0; font-family: 'DM Sans', sans-serif; font-size: .88rem;
+  background: transparent; color: var(--ch); outline: none; resize: none; transition: border-color .3s;
+}
+.ff input:focus, .ff textarea:focus, .ff select:focus { border-color: var(--ch); }
+.ff select option { color: var(--ch); background: #ffffff; }
+
+.fsub {
+  margin-top: .3rem; padding: .9rem 2.2rem; background: var(--ch); color: var(--white);
+  border: none; font-family: 'DM Sans', sans-serif; font-size: .73rem; letter-spacing: .22em;
+  text-transform: uppercase; transition: background 0.3s;
+  align-self: flex-start; border-radius: 2px; cursor: pointer;
+}
+.fsub:hover { background: var(--mg); }
+
+.cinfo { display: flex; flex-direction: column; gap: 2.5rem; }
+.cil { font-size: .63rem; letter-spacing: .28em; text-transform: uppercase; color: var(--mg); margin-bottom: .45rem; }
+.civ { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--ch); line-height: 1.55; }
+.fav { width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--ch); font-weight: 600; }
+.fn { font-size: .85rem; font-weight: 500; color: var(--ch); }
+.fr { font-size: .68rem; letter-spacing: .1em; color: var(--mg); text-transform: uppercase; margin-top: 2px; }
+
+#contact .stitle { color: var(--ch); }
+#contact .sbody { color: var(--dg); }
+
+@media(max-width:900px) { .clayout { grid-template-columns: 1fr; gap: 3rem; } }

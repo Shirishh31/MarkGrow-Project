@@ -1,0 +1,14 @@
+/* ── ABOUT.CSS — About Section ── */
+
+#about {
+  min-height: 80vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 12vh 5vw;
+}
+#about .slabel { color: var(--mg); }
+#about .stitle { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2.5rem; color: var(--ch); }
+#about .sbody { max-width: 700px; font-size: 1.05rem; line-height: 2; margin: 0 auto; color: var(--dg); }
+#about p { margin-bottom: 1.5rem; color: var(--dg); }
+#about p:last-child { margin-bottom: 0; }
+
+@media(max-width:600px) { #about { padding: 8vh 5vw; } }

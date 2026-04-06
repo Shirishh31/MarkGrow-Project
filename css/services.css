@@ -1,0 +1,64 @@
+/* ── SERVICES.CSS — Services & Achievements ── */
+
+#services { background: transparent; }
+.services-intro { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(220px, auto);
+  gap: 1.5rem;
+}
+.scard {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s;
+}
+.scard:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.05); transform: translateY(-3px); border-color: rgba(0,0,0,0.1); }
+.sname { font-family: 'DM Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ch); margin-bottom: .6rem; letter-spacing: -0.02em; }
+.sdesc { font-size: .9rem; color: var(--dg); line-height: 1.6; font-weight: 400; }
+.sillu { width: auto; height: 100px; margin-bottom: auto; }
+.scard:hover .sillu { transform: none; }
+
+/* Bento Layout */
+.scard:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+.scard:nth-child(2) { grid-column: span 7; grid-row: span 1; flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; }
+.scard:nth-child(3) { grid-column: span 3; grid-row: span 1; }
+.scard:nth-child(4) { grid-column: span 4; grid-row: span 1; }
+.scard:nth-child(5) { grid-column: span 8; grid-row: span 1; flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; }
+.scard:nth-child(6) { grid-column: span 4; grid-row: span 1; }
+.scard.row-layout .stext { flex: 1; margin-bottom: 0; }
+.scard.row-layout .sname { font-size: 1.8rem; }
+.scard.row-layout .sillu { margin-bottom: 0; height: 160px; }
+
+/* ACHIEVEMENTS */
+#achievements { background: transparent; }
+.agrid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 3rem; margin-top: 4rem; }
+.ai { text-align: center; }
+.anum { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem,6vw,5rem); font-weight: 300; color: var(--ch); line-height: 1; }
+.adiv { width: 28px; height: 1px; background: var(--mg); margin: 1rem auto; }
+.alabel { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--mg); }
+#achievements .stitle { color: var(--ch); }
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .sgrid { grid-template-columns: repeat(2,1fr); }
+  .scard { grid-column: span 1 !important; grid-row: span 1 !important; }
+  .scard.row-layout { flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; }
+  .scard.row-layout .sillu { height: 120px !important; margin-bottom: auto !important; }
+}
+@media(max-width:600px) {
+  .sgrid { grid-template-columns: 1fr; }
+  .agrid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .anum { font-size: 2.5rem; }
+}
+@media(max-width:400px) {
+  .agrid { grid-template-columns: 1fr; }
+  .sgrid { gap: 1rem; }
+  .scard { padding: 1.5rem; }
+}

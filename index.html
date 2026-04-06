@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkGrow — Marketing Agency</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+    <!-- ABSTRACT SPLASH BG -->
+    <div class="splash-bg">
+        <div class="s-blob b1"></div>
+        <div class="s-blob b2"></div>
+        <div class="s-blob b3"></div>
+        <div class="s-blob b4"></div>
+    </div>
+
+    <!-- INTRO -->
+    <div id="intro">
+        <div class="il">MARKGROW</div>
+        <div class="ibar"></div>
+        <div class="isub">Marketing &amp; Brand Growth Agency</div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="lo">
+        <div class="lbox">
+            <div class="lbrand">MARKGROW</div>
+            <div class="ltag">Welcome — Please introduce yourself</div>
+            <div class="lf"><label>Login Name</label><input type="text" id="lname" placeholder="Full name" autocomplete="off" /></div>
+            <div class="lf"><label>Email Address</label><input type="email" id="lemail" placeholder="hello@example.com" /></div>
+            <div class="lf"><label>Mobile Number</label><input type="tel" id="lphone" placeholder="+91 00000 00000" /></div>
+            <button type="button" class="lbtn" onclick="enterSite(event)">Login &rarr;</button>
+        </div>
+    </div>
+
+    <!-- WHITE FADE OVERLAY -->
+    <div id="white-fade" style="position:fixed;inset:0;background:#fff;z-index:10001;pointer-events:none;opacity:0;transition:opacity 0.8s ease;"></div>
+
+    <!-- NOISE OVERLAY (injected by JS) -->
+
+    <script>
+    (function() {
+        // Noise Overlay
+        const noise = document.createElement('div');
+        noise.classList.add('noise-overlay');
+        document.body.appendChild(noise);
+
+        // Cursor
+        const cursorDot = document.createElement('div');
+        cursorDot.classList.add('cursor-dot');
+        const cursorOutline = document.createElement('div');
+        cursorOutline.classList.add('cursor-outline');
+        document.body.appendChild(cursorDot);
+        document.body.appendChild(cursorOutline);
+        let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0, outX = 0, outY = 0;
+        window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+        (function tick() {
+            dotX += (mouseX - dotX) * 0.5; dotY += (mouseY - dotY) * 0.5;
+            outX += (mouseX - outX) * 0.2;  outY += (mouseY - outY) * 0.2;
+            cursorDot.style.left = dotX + 'px';   cursorDot.style.top = dotY + 'px';
+            cursorOutline.style.left = outX + 'px'; cursorOutline.style.top = outY + 'px';
+            requestAnimationFrame(tick);
+        })();
+    })();
+
+    window.addEventListener('load', () => {
+        // Show login after intro finishes
+        setTimeout(() => {
+            const lo = document.getElementById('lo');
+            if (lo) lo.classList.add('vis');
+        }, 4000);
+
+        // Parallax blobs
+        const b1=document.querySelector('.s-blob.b1'),b2=document.querySelector('.s-blob.b2'),b3=document.querySelector('.s-blob.b3'),b4=document.querySelector('.s-blob.b4');
+        if (b1) {
+            window.addEventListener('scroll', () => {
+                const s = window.scrollY;
+                b1.style.transform=`translateY(${s*-0.05}px) rotate(${s*0.01}deg)`;
+                b2.style.transform=`translateY(${s*-0.15}px) rotate(${s*-0.015}deg)`;
+                b3.style.transform=`translateY(${s*-0.25}px) rotate(${s*0.02}deg)`;
+                b4.style.transform=`translateY(${s*-0.4}px) rotate(${s*-0.03}deg)`;
+            });
+        }
+    });
+
+    async function enterSite(e) {
+        if (e) e.preventDefault();
+        const n = document.getElementById('lname').value.trim();
+        const em = document.getElementById('lemail').value.trim();
+        const p = document.getElementById('lphone').value.trim();
+        if (!n || !em || !p) { alert('Please fill in all fields to continue.'); return; }
+
+        try {
+            await fetch('http://localhost:3000/api/visitors', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: n, email: em, phone: p, date: new Date().toLocaleString() })
+            });
+        } catch (e) {
+            console.error('Backend connection failed, proceeding anyway.', e);
+        }
+
+        const whiteFade = document.getElementById('white-fade');
+        whiteFade.style.display = 'block';
+        whiteFade.offsetHeight;
+        whiteFade.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 700);
+    }
+    </script>
+</body>
+</html>

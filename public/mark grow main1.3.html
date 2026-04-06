@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkGrow — Marketing Agency</title>
+    <link rel="stylesheet" href="style.css" />
+<body>
+
+    <!-- ABSTRACT SPLASH BG -->
+    <div class="splash-bg">
+        <div class="s-blob b1"></div>
+        <div class="s-blob b2"></div>
+        <div class="s-blob b3"></div>
+        <div class="s-blob b4"></div>
+    </div>
+
+    <!-- INTRO -->
+    <div id="intro">
+        <div class="il">MARKGROW</div>
+        <div class="ibar"></div>
+        <div class="isub">Marketing &amp; Brand Growth Agency</div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="lo">
+        <div class="lbox">
+            <div class="lbrand">MARKGROW</div>
+            <div class="ltag">Welcome — Please introduce yourself</div>
+            <div class="lf"><label>Login Name</label><input type="text" id="lname" placeholder="Full name" autocomplete="off" /></div>
+            <div class="lf"><label>Email Address</label><input type="email" id="lemail" placeholder="hello@example.com" /></div>
+            <div class="lf"><label>Mobile Number</label><input type="tel" id="lphone" placeholder="+91 00000 00000" /></div>
+            <button class="lbtn" onclick="enterSite()">Enter the Studio &rarr;</button>
+        </div>
+    </div>
+
+    <!-- WHITE FADE OVERLAY -->
+    <div id="white-fade" style="position:fixed;inset:0;background:#fff;z-index:10001;pointer-events:none;opacity:0;transition:opacity 0.8s ease;"></div>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a class="nlogo nav-link" href="#home">MARKGROW</a>
+        <ul class="nlinks">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- SITE -->
+    <div id="site">
+
+        <div id="home-page" class="page-section" style="display:block;">
+            <!-- HERO -->
+            <section id="home">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="htitle">We make brands <em>grow.</em></h1>
+                    <div class="hsub">Let's build something great.</div>
+                    <p class="htag">Strategy, creativity, and relentless execution — MarkGrow turns your brand story into
+                        measurable, lasting growth.</p>
+                    <a href="#services" class="hcta">Explore Our Services</a>
+                </div>
+                
+                <div class="hero-bento rv d2 delay-card">
+                    <div class="hb-card hb-main">
+                        <div class="hb-text">
+                            <div class="hb-title">Brand Voice</div>
+                            <div class="hb-desc">Speak louder and clearer.</div>
+                        </div>
+                    </div>
+                    <div class="hb-card hb-topright">
+                        <div class="hb-text" style="text-align:center;">
+                            <div class="hb-title">High ROI</div>
+                        </div>
+                    </div>
+                    <div class="hb-card hb-bottomright">
+                        <div class="hb-text" style="text-align:center;">
+                            <div class="hb-title">Social Reach</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hline"></div>
+            </section>
+
+        <!-- MARQUEE -->
+        <div class="mwrap">
+            <div class="mtrack">
+                <span class="mi">Social Media <span class="mdot">✦</span></span>
+                <span class="mi">Brand Strategy <span class="mdot">✦</span></span>
+                <span class="mi">Product Marketing <span class="mdot">✦</span></span>
+                <span class="mi">Growth Hacking <span class="mdot">✦</span></span>
+                <span class="mi">Content Creation <span class="mdot">✦</span></span>
+                <span class="mi">Digital Ads <span class="mdot">✦</span></span>
+                <span class="mi">Social Media <span class="mdot">✦</span></span>
+                <span class="mi">Brand Strategy <span class="mdot">✦</span></span>
+                <span class="mi">Product Marketing <span class="mdot">✦</span></span>
+                <span class="mi">Growth Hacking <span class="mdot">✦</span></span>
+                <span class="mi">Content Creation <span class="mdot">✦</span></span>
+                <span class="mi">Digital Ads <span class="mdot">✦</span></span>
+            </div>
+        </div>
+        </div> <!-- End of home-page -->
+
+        <div id="services-page" class="page-section" style="display:none; padding-top:80px;">
+        <!-- SERVICES -->
+        <section id="services">
+            <div class="services-intro">
+                <div>
+                    <div class="rv"><span class="slabel">What We Do</span></div>
+                    <h2 class="stitle rv d1">Services built for<br>real results.</h2>
+                </div>
+                <p class="sbody rv d2" style="max-width:340px">From idea to impact — end-to-end marketing solutions for
+                    modern brands ready to stand out and scale.</p>
+            </div>
+
+            <div class="sgrid" id="sgrid">
+                <!-- 1: Tall Left -->
+                <div class="scard rv d1 delay-card">
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <path d="M8 24 L24 24 L48 8 L48 56 L24 40 L8 40 Z" stroke="var(--bk)" stroke-width="2"
+                            stroke-linejoin="round" />
+                        <path d="M54 24 Q60 32 54 40" stroke="var(--ac)" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    <div class="stext">
+                        <div class="sname">Social Media Marketing</div>
+                        <div class="sdesc">We craft content strategies and manage your presence across Instagram,
+                            Facebook, LinkedIn and more — growing real audiences that convert.</div>
+                    </div>
+                </div>
+
+                <!-- 2: Wide Top Right -->
+                <div class="scard rv d2 delay-card row-layout">
+                    <div class="stext">
+                        <div class="sname">Product Selling Strategy</div>
+                        <div class="sdesc">From listing to closing — we build funnels, ad campaigns and sales copy that
+                            turn browsers into buyers and accelerate revenue.</div>
+                    </div>
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <rect x="16" y="20" width="32" height="36" rx="4" stroke="var(--bk)" stroke-width="2" />
+                        <path d="M12 20 L52 20" stroke="var(--ac)" stroke-width="4" />
+                        <path d="M24 20 V12 A8 8 0 0 1 40 12 V20" stroke="var(--bk)" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <!-- 3: Mid Right 1 -->
+                <div class="scard rv d3 delay-card">
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <circle cx="20" cy="32" r="10" stroke="var(--bk)" stroke-width="2" />
+                        <circle cx="44" cy="32" r="10" stroke="var(--bk)" stroke-width="2" />
+                        <path d="M20 22 C20 8 44 8 44 22" stroke="var(--ac)" stroke-width="3" />
+                    </svg>
+                    <div class="stext">
+                        <div class="sname">Brand Growth</div>
+                        <div class="sdesc">Identity design, brand voice, positioning and storytelling — we build brands
+                            people remember long after the first impression.</div>
+                    </div>
+                </div>
+
+                <!-- 4: Mid Right 2 -->
+                <div class="scard rv d1 delay-card">
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <rect x="12" y="24" width="40" height="28" rx="4" stroke="var(--bk)" stroke-width="2" />
+                        <rect x="24" y="24" width="16" height="8" stroke="var(--ac)" fill="var(--ac)"
+                            stroke-width="2" />
+                        <path d="M26 24 V16 A6 6 0 0 1 38 16 V24" stroke="var(--bk)" stroke-width="2" />
+                    </svg>
+                    <div class="stext">
+                        <div class="sname">Content Creation</div>
+                        <div class="sdesc">Reels, carousels, blogs, copywriting — our content team produces
+                            scroll-stopping material tailored to your brand voice and goals.</div>
+                    </div>
+                </div>
+
+                <!-- 5: Wide Bottom Left -->
+                <div class="scard rv d2 delay-card row-layout">
+                    <div class="stext">
+                        <div class="sname">Digital Advertising</div>
+                        <div class="sdesc">Performance marketing on Meta, Google and YouTube — precision targeting,
+                            creative testing and data-backed optimisation for maximum ROI.</div>
+                    </div>
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <path d="M8 44 L20 32 L36 36 L56 20 L56 32 L36 48 L20 44 L8 56 Z" stroke="var(--ac)"
+                            stroke-width="2" stroke-linecap="round" />
+                        <circle cx="24" cy="40" r="4" fill="var(--bk)" />
+                        <line x1="16" y1="36" x2="28" y2="48" stroke="var(--bk)" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <!-- 6: Bottom Right -->
+                <div class="scard rv d3 delay-card">
+                    <svg class="sillu" viewBox="0 0 64 64" fill="none">
+                        <rect x="16" y="16" width="32" height="40" rx="8" stroke="var(--bk)" stroke-width="2" />
+                        <path d="M16 32 L48 32 M24 40 H40" stroke="var(--ac)" stroke-width="3" />
+                        <circle cx="32" cy="24" r="3" fill="var(--bk)" />
+                    </svg>
+                    <div class="stext">
+                        <div class="sname">Influencer &amp; PR</div>
+                        <div class="sdesc">We connect your brand with the right voices — micro to macro influencers,
+                            press outreach and community-building that builds trust fast.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="padding:0 5vw">
+            <div class="rule"></div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements">
+            <div class="rv"><span class="slabel">Our Track Record</span></div>
+            <h2 class="stitle rv d1">Numbers that<br>speak for us.</h2>
+            <div class="agrid">
+                <div class="ai rv d1 parallax-stat">
+                    <div class="anum" data-target="50" data-suffix="+">0+</div>
+                    <div class="adiv"></div>
+                    <div class="alabel">Brands Scaled</div>
+                </div>
+                <div class="ai rv d2 parallax-stat">
+                    <div class="anum" data-target="3" data-suffix="×">0×</div>
+                    <div class="adiv"></div>
+                    <div class="alabel">Avg Revenue Growth</div>
+                </div>
+                <div class="ai rv d3 parallax-stat">
+                    <div class="anum" data-target="2" data-suffix="M+">0M+</div>
+                    <div class="adiv"></div>
+                    <div class="alabel">Audience Reached</div>
+                </div>
+                <div class="ai rv d4 parallax-stat">
+                    <div class="anum" data-target="98" data-suffix="%">0%</div>
+                    <div class="adiv"></div>
+                    <div class="alabel">Client Satisfaction</div>
+                </div>
+            </div>
+        </section>
+        </div> <!-- End of services-page -->
+
+        <div id="contact-page" class="page-section" style="display:none; padding-top:80px;">
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="rv"><span class="slabel">Get In Touch</span></div>
+            <h2 class="stitle rv d1">Let's work together.</h2>
+            <div class="clayout">
+
+                <!-- LEFT: form -->
+                <form class="cform rv d1" id="contact-form">
+                    <div class="ff"><label>Your Name</label><input type="text" id="cname" placeholder="Full name"
+                            required /></div>
+                    <div class="ff"><label>Email</label><input type="email" id="cemail"
+                            placeholder="hello@yourbrand.com" required /></div>
+                    <div class="ff"><label>Mobile Number</label><input type="tel" id="cphone"
+                            placeholder="+91 00000 00000" /></div>
+                    <div class="ff">
+                        <label>Service You Want</label>
+                        <select id="cservice">
+                            <option value="">Select a service</option>
+                            <option value="Social Media Marketing">Social Media Marketing</option>
+                            <option value="Product Selling Strategy">Product Selling Strategy</option>
+                            <option value="Brand Growth">Brand Growth</option>
+                            <option value="Content Creation">Content Creation</option>
+                            <option value="Digital Advertising">Digital Advertising</option>
+                            <option value="Influencer &amp; PR">Influencer &amp; PR</option>
+                        </select>
+                    </div>
+                    <div class="ff"><label>Message</label><textarea id="cmsg" rows="4"
+                            placeholder="Tell us about your brand and goals..."></textarea></div>
+                    <button type="submit" class="fsub">Send Message &rarr;</button>
+                </form>
+
+                <!-- RIGHT: Emphasizing the form with whitespace -->
+                <div class="cinfo rv d2">
+                </div>
+            </div>
+        </section>
+        </div> <!-- End of contact-page -->
+
+        <div id="about-page" class="page-section" style="display:none; padding-top:80px;">
+        <!-- ABOUT -->
+        <section id="about" style="min-height:80vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 12vh 5vw;">
+            <div class="rv d1"><span class="slabel" style="color:var(--dg);">Our Story</span></div>
+            <h2 class="stitle rv d2" style="font-size:clamp(2.5rem, 5vw, 4rem); margin-bottom:2.5rem;">We are<br>Mark Grow.</h2>
+            <div class="sbody rv d3" style="max-width:700px; font-size:1.1rem; line-height:1.9; margin: 0 auto; color:var(--dg);">
+                <p style="margin-bottom:1.5rem;">At Mark Grow, we are passionate about helping businesses grow and succeed in the digital world. We specialize in providing result driven digital marketing solutions that increase brand visibility, attract the right audience, and boost sales.</p>
+                <p style="margin-bottom:1.5rem;">Our services include social media marketing, search engine optimization (SEO), content creation, and performance marketing. We focus on understanding each client's unique needs and creating strategies that deliver real growth.</p>
+                <p>At Mark Grow, our goal is simple to help your business reach its full potential and stand out in today's competitive market.</p>
+            </div>
+        </section>
+        </div> <!-- End of about-page -->
+
+        <!-- FOOTER BANNER -->
+        <div id="footerbanner">
+            <div class="fb-bg">
+                <div class="fb-bg-text">MARKGROW</div>
+            </div>
+            <div class="fb-inner">
+                <div class="fb-right">
+                    <div class="fb-agency-tag">Marketing &amp; Brand Growth Agency</div>
+                    <div class="fb-name" style="cursor:none;" title="Double click for admin">MARKGROW</div>
+                </div>
+                <div class="fb-left">
+                    <div class="fb-contact-item">
+                        <span class="fb-ci-label">Mobile</span>
+                        <span class="fb-ci-val">+91 1133452770</span>
+                    </div>
+                    <div class="fb-contact-item">
+                        <span class="fb-ci-label">Email</span>
+                        <span class="fb-ci-val">markgrow11@gmail.com</span>
+                    </div>
+                    <div class="fb-contact-item">
+                        <span class="fb-ci-label">The Founders</span>
+                        <span class="fb-ci-val" style="font-size: 1.05rem;">
+                            Shirish <span
+                                style="color:var(--mg);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'DM Sans',sans-serif;position:relative;top:-2px;margin-left:4px;">Founder</span><br>
+                            Kirtana <span
+                                style="color:var(--mg);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'DM Sans',sans-serif;position:relative;top:-2px;margin-left:4px;">Co-Founder</span>
+                        </span>
+                    </div>
+                    <div class="fb-contact-item">
+                        <span class="fb-ci-label">Tap for Location</span>
+                        <a href="https://maps.app.goo.gl/HEc7uDUcR4PDF1Yj7?g_st=ac" target="_blank"
+                            class="fb-ci-val map-link">Shivaji Nagar, Lane Number 2<br>Pune, Maharashtra, India</a>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="fb-socials">
+                        <a href="https://www.instagram.com/officialmarkgrow?igsh=MWV6Ymdkc2djMzMzeA==" target="_blank"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.3"
+                                fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shirish-parmar-1236b0365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.3"
+                                fill="none">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="fb-bottom">
+                <span class="fcp">&copy; 2026 MarkGrow. All rights reserved.</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const whiteFade = document.getElementById('white-fade');
+            
+            // Show login box after the intro animation finishes
+            setTimeout(() => {
+                const lo = document.getElementById('lo');
+                if(lo) lo.classList.add('vis');
+            }, 4000);
+            
+            // SPA Navigation Logic
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let targetHref = link.getAttribute('href');
+                    const targetId = targetHref.substring(1); // remove '#'
+                    
+                    // If clicking logo which points to home
+                    if (!link.classList.contains('nlogo')) {
+                        navLinks.forEach(n => { n.classList.remove('active'); });
+                        link.classList.add('active');
+                    } else {
+                        navLinks.forEach(n => { n.classList.remove('active'); });
+                        document.querySelector('a.nav-link[href="#home"]').classList.add('active');
+                    }
+                    
+                    // Trigger White fade up
+                    whiteFade.style.display = 'block';
+                    whiteFade.offsetHeight; // trigger reflow
+                    whiteFade.style.opacity = '1';
+                    
+                    setTimeout(() => {
+                        // Hide all sections
+                        pageSections.forEach(sec => sec.style.display = 'none');
+                        
+                        // Show target section
+                        const targetSection = document.getElementById(targetId + '-page');
+                        if (targetSection) targetSection.style.display = 'block';
+                        
+                        // Scroll to top
+                        window.scrollTo(0, 0);
+                        
+                        // We reset scroll reveal elements
+                        document.querySelectorAll('.rv').forEach(el => el.classList.remove('rvd'));
+                        
+                        // Fade white screen back down
+                        whiteFade.style.opacity = '0';
+                        setTimeout(() => { 
+                            whiteFade.style.display = 'none'; 
+                        }, 800);
+                    }, 800); // Wait for white fade to fully mask
+                });
+            });
+        });
+
+        function enterSite() {
+            const n = document.getElementById('lname').value.trim();
+            const em = document.getElementById('lemail').value.trim();
+            const p = document.getElementById('lphone').value.trim();
+            if(!n || !em || !p) { alert('Please fill in all fields to continue.'); return; }
+            
+            const visitors = JSON.parse(localStorage.getItem('mg_visitors') || '[]');
+            visitors.push({ name: n, email: em, phone: p, date: new Date().toLocaleString() });
+            localStorage.setItem('mg_visitors', JSON.stringify(visitors));
+
+            const whiteFade = document.getElementById('white-fade');
+            whiteFade.style.opacity = '1';
+            
+            setTimeout(() => {
+                const lo = document.getElementById('lo');
+                lo.classList.remove('vis');
+                lo.style.display = 'none';
+                
+                const intro = document.getElementById('intro');
+                if(intro) intro.style.display = 'none';
+                
+                const site = document.getElementById('site');
+                site.classList.add('vis');
+                
+                whiteFade.style.opacity = '0';
+                setTimeout(() => {
+                    whiteFade.style.display = 'none';
+                }, 800);
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>
